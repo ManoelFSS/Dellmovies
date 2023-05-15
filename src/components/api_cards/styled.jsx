@@ -5,7 +5,7 @@ import styled from "styled-components"
 
 export const Card = styled.section`
     
-    min-width: 215px;
+    min-width: 220px;
     background-color: black;
     display: inline-block;
     color: #fff;
@@ -16,7 +16,7 @@ export const Card = styled.section`
     transform: scale(0.9);
     
     @media(max-width:320px){
-        min-width: 240px;
+        min-width: 250px;
     }
    
 

@@ -13,25 +13,22 @@ function Carrosel(){
     const [popular, setPopular] = useState('/movie/popular?&language=pt-BR&page=1&')
 
     const [count,setCount] = useState(0)
-    const [cont,setCont] = useState(0)
+
     
     let newMagin = count;
-    let contador = cont;
+    
 
     const handMarginRigth = ()=>{
         let widthCorrentSlid = document.querySelector('#correntSlid').offsetWidth;
         let cards = document.querySelectorAll('.cards');
         let widthCard = document.querySelector('.cards').offsetWidth;
-        console.log(cards.length)
         console.log(widthCorrentSlid)
 
         if(newMagin <  (cards.length * widthCard) - widthCorrentSlid  ){
             let carouselContainer = document.querySelector('#correntSlid');
-
-            setCont(contador = contador + 1)
-            setCount(newMagin = newMagin + (widthCard ))
+            setCount(newMagin = newMagin + (widthCard))
             carouselContainer.scrollLeft = newMagin ;
-            console.log(newMagin)
+
         }
 
     }
@@ -39,14 +36,11 @@ function Carrosel(){
     const handMarginLeft = ()=>{
 
         let widthCorrentSlid = document.querySelector('#correntSlid').offsetWidth;
-        let cards = document.querySelectorAll('.cards');
         let widthCard = document.querySelector('.cards').offsetWidth;
         console.log(widthCorrentSlid)
 
         if(newMagin >  0 ){
             let carouselContainer = document.querySelector('#correntSlid');
-
-            setCont(contador = contador - 1)
             setCount(newMagin = newMagin - (widthCard))
             carouselContainer.scrollLeft = newMagin ;
             console.log(newMagin)
@@ -66,8 +60,8 @@ function Carrosel(){
                 </CorrentSlid>
                 <div className={'bnt'}>
                     <IconContext.Provider  value={{className:'direcionais'}} >
-                        <span onClick={()=> handMarginLeft()} ><IoIosArrowBack/></span>
-                        <span onClick={()=> handMarginRigth()} ><IoIosArrowForward/></span>
+                        <span onMouseUp={()=> handMarginLeft()} ><IoIosArrowBack/></span>
+                        <span onMouseDown={()=> handMarginRigth()} ><IoIosArrowForward/></span>
                     </IconContext.Provider >
                 </div>
             </Containner>

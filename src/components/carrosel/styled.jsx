@@ -57,7 +57,7 @@ export const Containner = styled.section`
 
 export const CorrentSlid = styled.div`
     display: flex;
-    max-width: 75%;
+    max-width: 78%;
     min-width: 200px;
     overflow: hidden;
     overflow-x: scroll;

@@ -15,28 +15,31 @@ export const Headers = styled.header`
         top: 0;
         left: 0;
         color: #fff;
-        background-image: linear-gradient(0deg,  #000000 3%, #000000f9 6%, rgba(0, 0, 0, 0.041) 91%);
+        background-image: linear-gradient(0deg,  #000000 3%, #000000f9 6%, rgba(0, 0, 0, 0.24) 91%);
         div{
             width: 76%;
             height: 60vh;
-
+          
             article{
                 display: flex;
                 flex-direction: column;
-                gap: 10px;
+                gap: 4px;
                 max-width: 600px;
                 line-height: 30px;
                 letter-spacing: 1px;
+              
                 @media(max-width:450px){
                     max-width: 100%;
                 }
 
                 span{
                     font-size: 12px;
+                    text-shadow: 0px 2px 8px #000000;
                 }
                 p{
                     font-size: 14px;
                     font-weight: 100;
+                
                 }
             }
         }
@@ -44,7 +47,7 @@ export const Headers = styled.header`
 
     section{
         display: flex;
-        padding: 0px 30px;
+        padding: 10px 30px;
         min-height: 12vh;
         width: 100%;
         background-color: #0000001f;
@@ -58,7 +61,8 @@ export const Headers = styled.header`
             align-items: center;
 
             img{
-                height: 6vh;
+                max-height: 7vh;
+                min-height:6vh ;
             }
             img ~ input{
                 width: 200px;
@@ -76,7 +80,7 @@ export const Headers = styled.header`
                 gap: 10px;
             
                 li{
-                    padding: 8px 40px;
+                    padding: 2% 40px;
                     border-radius: 20px;
                     color: #fff;
                     text-shadow: 0px 2px 8px #0000005C;
@@ -144,22 +148,5 @@ export const Input = styled.input`
             border-radius: 10px;
         }
      
-
-        
-     
 `;
 
-export const fundoImage = styled.input`
-display: flex;
-        height: 100vh;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        border: solid #ffff 2px;
-    img{
-        height: 100vh;
-        width: 100vw;
-        position: absolute;
-    }
-`

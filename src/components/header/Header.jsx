@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from "react";
-import {Headers, Input, fundoImage} from './styled'
+import {Headers, Input} from './styled'
 import axios, { all } from 'axios'
 import Logo from '../../assets/logo.png'
 import Lupa from '../../assets/lupa.png'
@@ -22,7 +22,8 @@ const [filmes, setFilmes] = useState([]);
 const [filmeIndex, setFilmeIndex] = useState(null);
 const [mostrarFilme, setMostrarFilme] = useState(false);
 const [widthInput,setwidthInput] = useState('60px')
-const [acao, setAcao] = useState(`/discover/movie?with_genres=28&language=pt-BR&page=${filmeIndex}&`)
+
+const [acao, setAcao] = useState(`/discover/movie?with_genres=28&language=pt-BR&page=10&`)
 console.log(filmeIndex)
 
 const  handelInput = (e)=>{
@@ -35,7 +36,11 @@ useEffect(() => {
     setApi(`${API_BASE}${acao}api_key=${API_KEY}`, `${'https://image.tmdb.org/t/p/original/'}`);
 
  // Trocar automaticamente o filme a cada 5 segundos
- const interval = setInterval(trocarFilmeAutomaticamente,  10000);
+ const interval = setInterval(()=>{
+    
+   trocarFilmeAutomaticamente()
+
+ },  4000);
  atualizarFilmeIndex() // Limpar o intervalo quando o componente for desmontado
  return () => {
    clearInterval(interval);
@@ -56,13 +61,13 @@ function setApi(urlendereco, urlimage) {
        setFilmes(allApi);
 
        // Gerar um índice aleatório quando o array de filmes é carregado
-       const randomIndex = Math.floor(Math.random() * allApi.length);
+       const randomIndex = Math.floor(Math.random() * 20);
        setFilmeIndex(randomIndex);
 
        // Mostrar o filme após um breve atraso
        setTimeout(() => {
          setMostrarFilme(true);
-       }, 10000);
+       }, 4000);
      })
      .catch(error => alert(`Desculpe, houve uma falha: ${error}`));
  };
@@ -76,10 +81,10 @@ const atualizarFilmeIndex = () => {
 
  // Atualizar o índice após um breve atraso
  setTimeout(() => {
-   const randomIndex = Math.floor(Math.random() * filmes.length);
+   const randomIndex = Math.floor(Math.random() * 20);
    setFilmeIndex(randomIndex);
    setMostrarFilme(true); // Mostrar o novo filme
- }, 10000);
+ }, 4000);
 };
 
 // Função para trocar o filme automaticamente
@@ -88,10 +93,10 @@ const trocarFilmeAutomaticamente = () => {
 
  // Atualizar o índice após um breve atraso
  setTimeout(() => {
-   const randomIndex = Math.floor(Math.random() * filmes.length);
+   const randomIndex = Math.floor(Math.random() * 20);
    setFilmeIndex(randomIndex);
    setMostrarFilme(true); // Mostrar o novo filme
- },10000);
+ },4000);
 };
 
 // Verificar se há filmes disponíveis

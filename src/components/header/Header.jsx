@@ -26,7 +26,7 @@ const [acao, setAcao] = useState(`/discover/movie?with_genres=28&language=pt-BR&
 console.log(filmeIndex)
 
 const  handelInput = (e)=>{
-    e.target.value !== '' ? setwidthInput('200px') :  setwidthInput('60px');
+    e.target.value !== '' ? setwidthInput('160px') :  setwidthInput('60px');
     
 }
 
@@ -36,8 +36,7 @@ useEffect(() => {
 
  // Trocar automaticamente o filme a cada 5 segundos
  const interval = setInterval(trocarFilmeAutomaticamente,  10000);
-
- // Limpar o intervalo quando o componente for desmontado
+ atualizarFilmeIndex() // Limpar o intervalo quando o componente for desmontado
  return () => {
    clearInterval(interval);
  };
@@ -50,8 +49,7 @@ function setApi(urlendereco, urlimage) {
        const allApi = resposta.data.results.map((item) => {
          return {
            ...item,
-           image: `${urlimage}${item.backdrop_path
-           }`
+           image: `${urlimage}${item.backdrop_path}`
          };
        });
 
@@ -98,7 +96,7 @@ const trocarFilmeAutomaticamente = () => {
 
 // Verificar se há filmes disponíveis
 if (filmes.length === 0) {
- return <p>Carregando...</p>;
+  return 
 }
 
 // Obter o filme atual com base no índice
@@ -128,7 +126,15 @@ const filmeAtual = filmes[filmeIndex];
                     </aside>
                 </div>
             </section>
-            <div className={'headerGradient'}></div>
+            <div className={'headerGradient'}>
+                <div>
+                    <article>
+                        <h1>{filmeAtual.title}</h1>
+                        <span>3hr 23 min | Fantasia, Família | {filmeAtual.release_date.split('').slice(0, 4).join(' ')}</span>
+                        <p>{filmeAtual.overview}</p>
+                    </article>
+                </div>
+            </div>
         </Headers>
     )
 }

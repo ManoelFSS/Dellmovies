@@ -6,12 +6,37 @@ export const Headers = styled.header`
     position: relative;
     
     .headerGradient{
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
         height: 100vh;
         width: 100%;
         position: absolute;
         top: 0;
         left: 0;
+        color: #fff;
         background-image: linear-gradient(0deg,  #000000 3%, #000000f9 6%, rgba(0, 0, 0, 0.041) 91%);
+        div{
+            width: 76%;
+            height: 60vh;
+
+            article{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                max-width: 50%;
+                line-height: 30px;
+                letter-spacing: 1px;
+
+                span{
+                    font-size: 12px;
+                }
+                p{
+                    font-size: 14px;
+                    font-weight: 100;
+                }
+            }
+        }
     }
 
     section{

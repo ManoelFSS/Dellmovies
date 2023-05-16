@@ -43,7 +43,7 @@ useEffect(() => {
     
    trocarFilmeAutomaticamente()
 
- },  4000);
+ },  10000);
  atualizarFilmeIndex() // Limpar o intervalo quando o componente for desmontado
  return () => {
    clearInterval(interval);
@@ -70,7 +70,7 @@ function setApi(urlendereco, urlimage) {
        // Mostrar o filme após um breve atraso
        setTimeout(() => {
          setMostrarFilme(true);
-       }, 4000);
+       }, 10000);
      })
      .catch(error => alert(`Desculpe, houve uma falha: ${error}`));
  };
@@ -87,7 +87,7 @@ const atualizarFilmeIndex = () => {
    const randomIndex = Math.floor(Math.random() * 20);
    setFilmeIndex(randomIndex);
    setMostrarFilme(true); // Mostrar o novo filme
- }, 4000);
+ },10000);
 };
 
 // Função para trocar o filme automaticamente
@@ -99,7 +99,7 @@ const trocarFilmeAutomaticamente = () => {
    const randomIndex = Math.floor(Math.random() * 20);
    setFilmeIndex(randomIndex);
    setMostrarFilme(true); // Mostrar o novo filme
- },4000);
+ },10000);
 };
 
 // Verificar se há filmes disponíveis

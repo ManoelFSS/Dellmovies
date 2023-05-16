@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Headers = styled.header`
-    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYKYL8YIRGaKHPBx-K261_OsGpc75lZmUWOQ&usqp=CAU') no-repeat center / cover;
+    background: url(${props=> props.back}) no-repeat center / cover;
     height: 100vh;
     position: relative;
     
@@ -17,7 +17,7 @@ export const Headers = styled.header`
     section{
         display: flex;
         padding: 0px 30px;
-        min-height: 10vh;
+        min-height: 12vh;
         width: 100%;
         background-color: #0000001f;
         backdrop-filter: blur(10px);
@@ -48,13 +48,16 @@ export const Headers = styled.header`
                 gap: 10px;
             
                 li{
-                    padding: 10px 40px;
+                    padding: 8px 40px;
                     border-radius: 20px;
                     color: #fff;
+                    text-shadow: 0px 2px 8px #0000005C;
                 }
 
                 li:hover, .ativo{
                     background-color: #747474;
+                    box-shadow: 0px 2px 10px 2px #0000005C;
+
                 }
             }
         }
@@ -79,6 +82,7 @@ export const Headers = styled.header`
                 text-decoration: none;
                 font-weight: 300;
                 font-size: 14px;
+                text-shadow: 0px 2px 8px #0000005C;
                }
             }
            
@@ -102,6 +106,7 @@ export const Input = styled.input`
             color: #fff;
             font-weight: 300;
             font-size: 14px;
+            text-shadow: 0px 2px 8px #0000005C;
         }
         &:focus,  &:hover, &:active {
             width: 200px ;
@@ -115,3 +120,18 @@ export const Input = styled.input`
         
      
 `;
+
+export const fundoImage = styled.input`
+display: flex;
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: solid #ffff 2px;
+    img{
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+    }
+`

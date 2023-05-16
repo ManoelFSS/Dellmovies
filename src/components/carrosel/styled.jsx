@@ -9,7 +9,7 @@ export const Section = styled.section`
 `;
 
 export const Title = styled.div`
-     width: 73%;
+     width: 76%;
      color: #fff;
      font-weight: bold;
      font-size: 0.8rem;

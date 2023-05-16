@@ -138,8 +138,7 @@ const filmeAtual = filmes[filmeIndex];
                 <div>
                     <article>
                         <h1>{filmeAtual.title}</h1>
-                        <span>3hr 23 min | Fantasia, Família | </span>
-                        <span>{filmeAtual.release_date.split('').slice(0, 4).join(' ')}</span>
+                        <span>3hr 23 min | Fantasia, Família | {filmeAtual.release_date.split('').slice(0, 4).join(' ')}</span>
                         <avaliacao className={"avaliacao"}>
                           <img src={Estrela} alt="estrela" />
                           <span>{filmeAtual.vote_average}</span>

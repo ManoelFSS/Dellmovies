@@ -18,9 +18,10 @@ export const Headers = styled.header`
         background-image: linear-gradient(0deg,  #000000 3%, #000000f9 6%, rgba(0, 0, 0, 0.24) 91%);
         div{
             width: 77%;
-            height: 70vh;
+            height: 50vh;
             @media(max-width:450px){
                    width:85%;
+                   height: 73vh;
             }
           
             article{
@@ -39,12 +40,13 @@ export const Headers = styled.header`
                     font-size: 12px;
                     text-shadow: 0px 2px 8px #000000;
                 }
+                
                 p{
                     font-size: 14px;
                     font-weight: 100;
                     @media(max-width:450px){
                         line-height: 20px;
-                        font-size: 12px;
+                        font-size: 13px;
                     }
                 }
             }

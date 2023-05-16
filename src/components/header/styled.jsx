@@ -24,9 +24,12 @@ export const Headers = styled.header`
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
-                max-width: 50%;
+                max-width: 600px;
                 line-height: 30px;
                 letter-spacing: 1px;
+                @media(max-width:450px){
+                    max-width: 100%;
+                }
 
                 span{
                     font-size: 12px;

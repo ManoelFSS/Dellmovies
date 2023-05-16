@@ -1,8 +1,11 @@
 import React, {useState,useEffect} from "react";
-import {Headers, Input} from './styled'
+import {Headers, Input,Conteiner_btns} from './styled'
 import axios, { all } from 'axios'
 import Logo from '../../assets/logo.png'
 import Lupa from '../../assets/lupa.png'
+import Estrela from '../../assets/estrela.png'
+import Setapkay from '../../assets/setaplay.png'
+import Iconevideo from '../../assets/iconevideo.png'
 
 export default function Header(){
 
@@ -23,7 +26,7 @@ const [filmeIndex, setFilmeIndex] = useState(null);
 const [mostrarFilme, setMostrarFilme] = useState(false);
 const [widthInput,setwidthInput] = useState('60px')
 
-const [acao, setAcao] = useState(`/discover/movie?with_genres=28&language=pt-BR&page=10&`)
+const [acao, setAcao] = useState(`/discover/movie?with_genres=28&language=pt-BR&page=1&`)
 console.log(filmeIndex)
 
 const  handelInput = (e)=>{
@@ -136,8 +139,23 @@ const filmeAtual = filmes[filmeIndex];
                     <article>
                         <h1>{filmeAtual.title}</h1>
                         <span>3hr 23 min | Fantasia, Família | {filmeAtual.release_date.split('').slice(0, 4).join(' ')}</span>
+                        <avaliacao className={"avaliacao"}>
+                          <img src={Estrela} alt="estrela" />
+                          <span>{filmeAtual.vote_average}</span>
+                          <span>IMDB</span>
+                        </avaliacao>
                         <p>{filmeAtual.overview}</p>
                     </article>
+                    <Conteiner_btns>
+                        <a href="#" className={'btnAssistir'}>
+                          <img src={Setapkay} alt="icone play" />
+                          Assistir agora
+                        </a>
+                        <a href="#"  className={'btnTraler'}>
+                          <img src={Iconevideo} alt="" />
+                          Trailer
+                        </a>
+                    </Conteiner_btns>
                 </div>
             </div>
         </Headers>

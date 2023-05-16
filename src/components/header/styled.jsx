@@ -17,8 +17,11 @@ export const Headers = styled.header`
         color: #fff;
         background-image: linear-gradient(0deg,  #000000 3%, #000000f9 6%, rgba(0, 0, 0, 0.24) 91%);
         div{
-            width: 76%;
-            height: 60vh;
+            width: 77%;
+            height: 70vh;
+            @media(max-width:450px){
+                   width:85%;
+            }
           
             article{
                 display: flex;
@@ -39,7 +42,10 @@ export const Headers = styled.header`
                 p{
                     font-size: 14px;
                     font-weight: 100;
-                
+                    @media(max-width:450px){
+                        line-height: 20px;
+                        font-size: 12px;
+                    }
                 }
             }
         }
@@ -120,7 +126,66 @@ export const Headers = styled.header`
            
         }
     }
+    .avaliacao{
+        display: flex;
+        gap: 20px;
+        span{
+            font-size: 20px !important;
+            
+        }
+        span:nth-child(3){
+            background-color: yellow !important;
+            padding: 0 6px;
+            color: #000000;
+            font-weight: bold;
+        }
+        img {
+            height:24px ;
+        }
+    }
+    
 `;
+
+export const Conteiner_btns= styled.div`
+    display: flex;
+    min-width: 100%;
+    flex-wrap:wrap;
+    max-height: 100px ;
+    gap: 10px;
+    @media(max-width:450px){
+        justify-content: center;
+    }
+ 
+    img{
+        height: 2vh;
+    }
+    
+    .btnAssistir,  .btnTraler{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-width: 170px;
+        height: 40px;
+        color: #fff;
+        background-color: #D53A00;
+        margin-top: 10px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: none;
+        padding: 10px;
+        @media(max-width:450px){
+            min-width: 250px;
+        }
+    }
+    .btnTraler{
+    
+        background-color: #717171;
+      
+    }
+`;
+
 
 export const Input = styled.input`
     width: ${props=> props.widthInput};

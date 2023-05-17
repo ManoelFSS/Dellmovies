@@ -13,7 +13,7 @@ export const Title = styled.div`
      color: #fff;
      font-weight: bold;
      font-size: 0.8rem;
-     padding: 5px 0px;
+     padding: 20px 0px;
 `;
 
 export const Containner = styled.section`

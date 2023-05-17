@@ -2,26 +2,39 @@ import styled from 'styled-components';
 
 export const Headers = styled.header`
     background: url(${props=> props.back}) no-repeat center / cover;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
+    @media(max-width:670px){
+        height: 120vh;
+    }
+    @media(max-width:460px){
+        height: 100vh;
+    }
     
     .headerGradient{
         display: flex;
         align-items: flex-end;
         justify-content: center;
-        height: 100vh;
+        height: 100%;
         width: 100%;
         position: absolute;
         top: 0;
         left: 0;
         color: #fff;
+        padding-bottom: 10px;
         background-image: linear-gradient(0deg,  #000000 3%, #000000f9 6%, rgba(0, 0, 0, 0.24) 91%);
+    
+    
         div{
             width: 77%;
-            height: 50vh;
-            @media(max-width:450px){
-                   width:85%;
-                   height: 73vh;
+          
+            @media(max-width:670px){
+                width:90%;
+                height: 83%;
+            }
+            
+            @media(max-width:460px){
+                text-align: center;
             }
           
             article{
@@ -32,7 +45,7 @@ export const Headers = styled.header`
                 line-height: 30px;
                 letter-spacing: 1px;
               
-                @media(max-width:450px){
+                @media(max-width:670px){
                     max-width: 100%;
                 }
 
@@ -40,11 +53,11 @@ export const Headers = styled.header`
                     font-size: 12px;
                     text-shadow: 0px 2px 8px #000000;
                 }
-                
+
                 p{
                     font-size: 14px;
                     font-weight: 100;
-                    @media(max-width:450px){
+                    @media(max-width:670px){
                         line-height: 20px;
                         font-size: 13px;
                     }
@@ -147,8 +160,7 @@ export const Headers = styled.header`
     }
     
 `;
-
-export const Conteiner_btns= styled.div`
+export const Conteiner_btns = styled.div`
     display: flex;
     min-width: 100%;
     flex-wrap:wrap;

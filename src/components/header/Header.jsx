@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from "react";
-import {Headers, Input,Conteiner_btns} from './styled'
+import {Headers, Input, Conteiner_btns} from './styled'
 import axios, { all } from 'axios'
 import Logo from '../../assets/logo.png'
 import Lupa from '../../assets/lupa.png'

@@ -33,11 +33,16 @@ export const Headers = styled.header`
           
             @media(max-width:670px){
                 width:90%;
-                height: 80%;
+                height: 70%;
             }
             
-            @media(max-width:430px){
+            @media(max-width:450px){
+                display: flex;
+                flex-direction: column;
                 text-align: center;
+                align-items: center;
+                justify-content: flex-end;
+                border: solid 1px red;
             }
           
             article{
@@ -164,13 +169,14 @@ export const Headers = styled.header`
     
 `;
 export const Conteiner_btns = styled.div`
-    display: flex;
-    min-width: 100%;
-    flex-wrap:wrap;
-    max-height: 100px ;
+    display:flex ;
+    margin-top: 20px;
+    max-height: 100px;
     gap: 10px;
     @media(max-width:450px){
-        justify-content: center;
+        margin-top: 20px;
+        max-height: 100px;
+        
     }
  
     img{
@@ -182,7 +188,7 @@ export const Conteiner_btns = styled.div`
         align-items: center;
         justify-content: center;
         gap: 10px;
-        min-width: 170px;
+        width: 170px;
         height: 40px;
         color: #fff;
         background-color: #D53A00;

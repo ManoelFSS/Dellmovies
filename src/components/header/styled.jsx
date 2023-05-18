@@ -4,12 +4,7 @@ export const Headers = styled.header`
     background: #000000 url(${props=> props.back}) no-repeat center / cover;
     min-height: 100vh;
     position: relative;
-    @media(max-width:670px){
-        height: 120vh;
-    }
-    @media(max-width:460px){
-        height: 100vh;
-    }
+ 
 
   
     .headerGradient{

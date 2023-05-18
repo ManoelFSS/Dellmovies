@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Headers = styled.header`
-    background: url(${props=> props.back}) no-repeat center / cover;
+    background: #000000 url(${props=> props.back}) no-repeat center / cover;
     min-height: 100vh;
     position: relative;
     @media(max-width:670px){
@@ -10,10 +10,11 @@ export const Headers = styled.header`
     @media(max-width:460px){
         height: 100vh;
     }
-    
+
+  
     .headerGradient{
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: center;
         height: 100%;
         width: 100%;
@@ -23,17 +24,19 @@ export const Headers = styled.header`
         color: #fff;
         padding-bottom: 10px;
         background-image: linear-gradient(0deg,  #000000 3%, #000000f9 6%, rgba(0, 0, 0, 0.24) 91%);
-    
+        @media(max-width:670px){
+            align-items:flex-end;
+        }
     
         div{
             width: 77%;
           
             @media(max-width:670px){
                 width:90%;
-                height: 83%;
+                height: 80%;
             }
             
-            @media(max-width:460px){
+            @media(max-width:430px){
                 text-align: center;
             }
           

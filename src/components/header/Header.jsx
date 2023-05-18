@@ -9,14 +9,8 @@ import Iconevideo from '../../assets/iconevideo.png'
 
 export default function Header(){
 
-
-
-   
-
-
-   
-   const [emAlta, setEmAlta] = useState('/movie/top_rated?language=pt-BR&page=1&')
-   const [popular, setPopular] = useState('/movie/popular?&language=pt-BR&page=1&')
+const [emAlta, setEmAlta] = useState('/movie/top_rated?language=pt-BR&page=1&')
+const [popular, setPopular] = useState('/movie/popular?&language=pt-BR&page=1&')
 
 const API_KEY = 'a80332ecd67498023b64c67499fbd152';
 const API_BASE = 'https://api.themoviedb.org/3';
@@ -104,7 +98,11 @@ const trocarFilmeAutomaticamente = () => {
 
 // Verificar se há filmes disponíveis
 if (filmes.length === 0) {
-  return 
+  return (
+    <div className="load">
+        <p>Carregando...</p>
+    </div>
+  )
 }
 
 // Obter o filme atual com base no índice
@@ -129,7 +127,7 @@ const filmeAtual = filmes[filmeIndex];
                 <div>
                     <aside>           
                         <img src={Lupa} alt="pesquisa"  />
-                        <Input widthInput={widthInput}  type="search" placeholder="Filtro" id={'pesquisar'}  onChange={(e)=> handelInput(e)}/>
+                        <Input widthInput={widthInput}  type="search" placeholder="Filtro"  onChange={(e)=> handelInput(e)}/>
                         <a href="#">Login</a>
                     </aside>
                 </div>

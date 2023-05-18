@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Headers = styled.header`
     background: #000000 url(${props=> props.back}) no-repeat center / cover;
-    min-height: 100vh;
+    height: 100vh;
     position: relative;
  
 

@@ -37,7 +37,7 @@ export const Headers = styled.header`
                 text-align: center;
                 align-items: center;
                 justify-content: flex-end;
-                border: solid 1px red;
+            
             }
           
             article{

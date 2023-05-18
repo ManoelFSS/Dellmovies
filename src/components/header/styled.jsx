@@ -168,10 +168,10 @@ export const Conteiner_btns = styled.div`
     margin-top: 20px;
     max-height: 100px;
     gap: 10px;
-    
+
     @media(max-width:450px){
         margin-top: 20px;
-        margin-bottom:50px;
+        margin-bottom:70px;
         max-height: 100px;
     }
  

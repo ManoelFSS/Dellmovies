@@ -14,12 +14,15 @@ const API_BASE = 'https://api.themoviedb.org/3';
 
 const [filmes, setFilmes] = useState([])
 const [colorIcone, setColorIcone] = useState('#fff')
+const [quantidadeFilmes, setquantidadeFilmes] = useState(10)
 
 useEffect(() => {
 
+    setApi(`${API_BASE}${props.generoFilmes}api_key=${API_KEY}&per_page=10`, `${'https://image.tmdb.org/t/p/w500/'}`);
+ 
     setApi(`${API_BASE}${props.url}api_key=${API_KEY}`, `${'https://image.tmdb.org/t/p/w500/'}`);
-
-},[])
+    
+},[props.generoFilmes])
 
 function setApi(urlendereco, urlimage ){
 
@@ -35,7 +38,7 @@ function setApi(urlendereco, urlimage ){
 
             setFilmes(allApi)
           
-        }).catch(error => alert(`desculpe, houve um falha ${error}`));
+        }).catch(error => console.log(`desculpe, houve um falha ${error}`));
         
     };
 
@@ -47,7 +50,7 @@ function setApi(urlendereco, urlimage ){
 
     return (
         <Div>
-            {filmes.map((item, id )=> (
+            {filmes.slice(0,props.quantidadeFilmes).map((item, id )=> (
                 <Card key={id} className={'cards'}>
                     <img src={item.image} alt={item.title} />
                     <div>

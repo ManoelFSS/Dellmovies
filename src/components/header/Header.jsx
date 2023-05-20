@@ -11,6 +11,9 @@ export default function Header(){
 
 const [emAlta, setEmAlta] = useState('/movie/top_rated?language=pt-BR&page=1&')
 const [popular, setPopular] = useState('/movie/popular?&language=pt-BR&page=1&')
+const [acao, setAcao] = useState(`/discover/movie?with_genres=28&language=pt-BR&page=1&`)
+const [secao, setSecao] = useState(acao)
+
 
 const API_KEY = 'a80332ecd67498023b64c67499fbd152';
 const API_BASE = 'https://api.themoviedb.org/3';
@@ -20,7 +23,7 @@ const [filmeIndex, setFilmeIndex] = useState(null);
 const [mostrarFilme, setMostrarFilme] = useState(false);
 const [widthInput,setwidthInput] = useState('60px')
 
-const [acao, setAcao] = useState(`/discover/movie?with_genres=28&language=pt-BR&page=1&`)
+
 console.log(filmeIndex)
 
 const  handelInput = (e)=>{
@@ -66,7 +69,7 @@ function setApi(urlendereco, urlimage) {
          setMostrarFilme(true);
        }, 10000);
      })
-     .catch(error => alert(`Desculpe, houve uma falha: ${error}`));
+     .catch(error => console.log(`Desculpe, houve uma falha: ${error}`));
  };
 
  getFilms(urlendereco, urlimage);

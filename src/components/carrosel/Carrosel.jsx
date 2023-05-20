@@ -5,19 +5,13 @@ import { IoIosArrowForward } from 'react-icons/io' ;
 import { IconContext } from "react-icons";
 import {Containner,CorrentSlid,Section,Title} from './styled';
 
-
 function Carrosel(){
 
-    const [acao, setAcao] = useState('/discover/movie?with_genres=28&language=pt-BR&page=1&')
-    const [emAlta, setEmAlta] = useState('/movie/top_rated?language=pt-BR&page=1&')
     const [popular, setPopular] = useState('/movie/popular?&language=pt-BR&page=1&')
-
     const [count,setCount] = useState(0)
 
-    
     let newMagin = count;
     
-
     const handMarginRigth = ()=>{
         let widthCorrentSlid = document.querySelector('#correntSlid').offsetWidth;
         let cards = document.querySelectorAll('.cards');
@@ -56,7 +50,7 @@ function Carrosel(){
             </Title>
             <Containner>
                 <CorrentSlid id={'correntSlid'}>
-                    <Cards url={popular}/>
+                    <Cards url={popular} />
                 </CorrentSlid>
                 <div className={'bnt'}>
                     <IconContext.Provider  value={{className:'direcionais'}} >

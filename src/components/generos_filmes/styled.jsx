@@ -70,6 +70,11 @@ export  const Areafimes = styled.section`
             width: 220px;
             color: #ffffff;
             padding-bottom: 5px;
+            transition: all 0.3s;
+            &:hover{
+                transform: scale(0.8);
+            }
+
             @media(max-width:466px){
                 width: 160px;
            

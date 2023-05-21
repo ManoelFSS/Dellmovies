@@ -14,6 +14,8 @@ export const Card = styled.section`
     position: relative;
     cursor: pointer;
     transform: scale(0.9);
+  
+    
     
     @media(max-width:320px){
         min-width: 250px;

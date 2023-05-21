@@ -31,7 +31,7 @@ export const Headers = styled.header`
                
             }
             img{
-                height: 10vh;
+                height: 9vh;
                 @media(max-width:466px){
                     height:5vh;
         
@@ -57,7 +57,7 @@ export const Headers = styled.header`
                 width: 20%;
 
                 img{  
-                 height:10vh ;
+                 height:9vh ;
                  margin-top: 10px;
                 }
             }
@@ -87,6 +87,7 @@ export const Headers = styled.header`
                     border-radius: 20px;
                     color: #fff;
                     text-shadow: 0px 2px 8px #0000005C;
+                    cursor: pointer;
                     @media(max-width:366px){
                         padding: 2% 20px;
         
@@ -111,14 +112,14 @@ export const  HeaderGradient = styled.header`
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    height: 100%;
+    height: 101%;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
     color: #fff;
     padding-bottom: 10px;
-    background-image: linear-gradient(0deg,  #000000 3%, #000000f9 6%, rgba(0, 0, 0, 0.24) 91%);
+    background-image: linear-gradient(0deg,  #000000 5%, #000000f9 7%, rgba(0, 0, 0, 0.24) 88%);
 
     @media(max-width:670px){
         align-items:flex-end;

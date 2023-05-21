@@ -7,9 +7,6 @@ export const Headers = styled.header`
     height: 100vh;
     position: relative;
 
-
-
-
     section{
         display: flex;
         padding: 10px 30px;
@@ -196,15 +193,16 @@ export const  Avaliacao = styled.div`
 
 
 export const Descricao = styled.div`
-
    width: 600px;
    margin-left:11%;
-
    @media(max-width:670px){
     width: 100%;
-    margin-left:0%;
-        
+    margin-left:0%; 
   }
+  @media(max-width:466px){
+    padding-bottom:20px;
+  }
+
   h1{
     font-size: 24px;
     font-weight: bolder;

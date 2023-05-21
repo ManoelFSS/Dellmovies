@@ -197,7 +197,7 @@ export const Descricao = styled.div`
    margin-left:11%;
    @media(max-width:680px){
     width: 100%;
-    margin-left:0%; 
+    margin-left:2%; 
   }
   @media(max-width:466px){
     padding-bottom:45px;
@@ -218,6 +218,7 @@ export const Descricao = styled.div`
 
   p{
     font-size: 14px;
+    padding-right: 10px;
     @media(max-width:670px){
         font-size: 11px;
     }

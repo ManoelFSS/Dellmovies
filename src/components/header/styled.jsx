@@ -46,7 +46,7 @@ export const Headers = styled.header`
             align-items: center;
             padding-left: 10px;
 
-            @media(max-width:904px){
+            @media(max-width:649px){
                 display:none ;
             }
 
@@ -75,8 +75,10 @@ export const Headers = styled.header`
             display: flex ;
             align-items: center;
             justify-content: center;
+            @media(max-width:682px){
+                max-width: 250px;
+            }
             
-          
             ul{
                 display: flex;
                 list-style: none;

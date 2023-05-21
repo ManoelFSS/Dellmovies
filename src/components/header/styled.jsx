@@ -195,12 +195,12 @@ export const  Avaliacao = styled.div`
 export const Descricao = styled.div`
    width: 600px;
    margin-left:11%;
-   @media(max-width:670px){
+   @media(max-width:680px){
     width: 100%;
     margin-left:0%; 
   }
   @media(max-width:466px){
-    padding-bottom:20px;
+    padding-bottom:45px;
   }
 
   h1{

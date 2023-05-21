@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from "react";
-import {Headers, Input, Conteiner_btns} from './styled'
+import {Headers, Input, Conteiner_btns,Descricao, Avaliacao, HeaderGradient, Containner} from './styled'
 import axios, { all } from 'axios'
 import Logo from '../../assets/logo.png'
 import Lupa from '../../assets/lupa.png'
@@ -22,12 +22,13 @@ const [filmes, setFilmes] = useState([]);
 const [filmeIndex, setFilmeIndex] = useState(null);
 const [mostrarFilme, setMostrarFilme] = useState(false);
 const [widthInput,setwidthInput] = useState('60px')
+const [bordColor,setBordColor] = useState('none')
 
 
 console.log(filmeIndex)
 
 const  handelInput = (e)=>{
-    e.target.value !== '' ? setwidthInput('160px') :  setwidthInput('60px');
+    e.target.value !== '' ? `${setwidthInput('200px')} ${setBordColor('#fff')} ` :  `${setwidthInput('60px')}  ${setBordColor('none')} `;
     
 }
 
@@ -130,35 +131,35 @@ const filmeAtual = filmes[filmeIndex];
                 <div>
                     <aside>           
                         <img src={Lupa} alt="pesquisa"  />
-                        <Input widthInput={widthInput}  type="search" placeholder="Filtro"  onChange={(e)=> handelInput(e)}/>
-                        <a href="#">Login</a>
+                        <Input widthInput={widthInput} bordColor={bordColor}  type="search" placeholder="Filtro"  onChange={(e)=> handelInput(e)}/>
                     </aside>
+                    <a href="#">Login</a>
                 </div>
             </section>
-            <div className={'headerGradient'}>
-                <div>
-                    <article>
+            <HeaderGradient>
+                <Containner>
+                    <Descricao>
                         <h1>{filmeAtual.title}</h1>
-                        <span>3hr 23 min | Fantasia, Família | {filmeAtual.release_date.split('').slice(0, 4).join(' ')}</span>
-                        <avaliacao className={"avaliacao"}>
+                        <div >3hr 23 min | Fantasia, Família | {filmeAtual.release_date.split('').slice(0, 4).join(' ')}</div>
+                        <Avaliacao >
                           <img src={Estrela} alt="estrela" />
                           <span>{filmeAtual.vote_average}</span>
                           <span>IMDB</span>
-                        </avaliacao>
+                        </Avaliacao>
                         <p>{filmeAtual.overview}</p>
-                    </article>
-                    <Conteiner_btns>
-                        <a href="#" className={'btnAssistir'}>
-                          <img src={Setapkay} alt="icone play" />
-                          Assistir agora
-                        </a>
-                        <a href="#"  className={'btnTraler'}>
-                          <img src={Iconevideo} alt="" />
-                          Trailer
-                        </a>
-                    </Conteiner_btns>
-                </div>
-            </div>
+                        <Conteiner_btns>
+                            <a href="#" className={'btnAssistir'}>
+                              <img src={Setapkay} alt="icone play" />
+                              Assistir agora
+                            </a>
+                            <a href="#"  className={'btnTraler'}>
+                              <img src={Iconevideo} alt="" />
+                              Trailer
+                            </a>
+                        </Conteiner_btns>
+                    </Descricao>
+                </Containner>
+            </HeaderGradient>
         </Headers>
     )
 }

@@ -5,7 +5,7 @@ import styled from "styled-components"
 
 export const Card = styled.section`
     
-    min-width: 220px;
+    width: 220px;
     background-color: black;
     display: inline-block;
     color: #fff;

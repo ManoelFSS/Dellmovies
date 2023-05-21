@@ -26,39 +26,35 @@ export default function Navbar(){
         <SecaoDeFilmes>
             <nav>
                 <ul>
-                    {/* <div> */}
-                        <li className={menuAtivo === "Em Alta" ? "ativo" : ""} onClick={()=> `${setGeneroFilmes(emAlta)} ${setMenuAtivo("Em Alta")}` }>
-                            Em Alta
-                        </li>
-                        <li  className={menuAtivo === "Popular" ? "ativo" : ""}  onClick={()=>  `${setGeneroFilmes(popular)} ${setMenuAtivo("Popular")}` }>
-                            Popular
-                        </li>
-                        <li  className={menuAtivo === "Drama" ? "ativo" : ""}  onClick={()=>  `${setGeneroFilmes(drama)} ${setMenuAtivo("Drama")}`}>
-                            Drama
-                        </li>
-                    {/* </div>
-                    <div> */}
-                        <li className={menuAtivo === "Ação" ? "ativo" : ""} onClick={()=>  `${setGeneroFilmes(acao)} ${setMenuAtivo("Ação")}`}>
-                            Ação
-                        </li>
-                        <li  className={menuAtivo === "Aventura" ? "ativo" : ""} onClick={()=>  `${setGeneroFilmes(aventura)} ${setMenuAtivo("Aventura")}`}>
-                            Aventura
-                        </li>
-                        <li className={menuAtivo === "Comédia" ? "ativo" : ""}  onClick={()=>  `${setGeneroFilmes(comedia)} ${setMenuAtivo("Comédia")}`}>
-                            Comédia
-                        </li>
-                    {/* </div>
-                    <div> */}
-                        <li className={menuAtivo === "Crime" ? "ativo" : ""} onClick={()=>  `${setGeneroFilmes(crime)} ${setMenuAtivo("Crime")}`}>
-                            Crime
-                        </li>
-                        <li className={menuAtivo === "Fantasia" ? "ativo" : ""} onClick={()=>  `${setGeneroFilmes(fantasia)} ${setMenuAtivo("Fantasia")}`}>
-                            Fantasia
-                        </li>
-                        <li className={menuAtivo === "Família" ? "ativo" : ""} onClick={()=>  `${setGeneroFilmes(familia)} ${setMenuAtivo("Família")}`}>
-                            Família
-                        </li>
-                    {/* </div> */}
+                
+                    <li className={menuAtivo === "Em Alta" ? "ativo" : ""} onClick={()=> `${setGeneroFilmes(emAlta)} ${setMenuAtivo("Em Alta")}` }>
+                        Em Alta
+                    </li>
+                    <li  className={menuAtivo === "Popular" ? "ativo" : ""}  onClick={()=>  `${setGeneroFilmes(popular)} ${setMenuAtivo("Popular")}` }>
+                        Popular
+                    </li>
+                    <li  className={menuAtivo === "Drama" ? "ativo" : ""}  onClick={()=>  `${setGeneroFilmes(drama)} ${setMenuAtivo("Drama")}`}>
+                        Drama
+                    </li>
+                    <li className={menuAtivo === "Ação" ? "ativo" : ""} onClick={()=>  `${setGeneroFilmes(acao)} ${setMenuAtivo("Ação")}`}>
+                        Ação
+                    </li>
+                    <li  className={menuAtivo === "Aventura" ? "ativo" : ""} onClick={()=>  `${setGeneroFilmes(aventura)} ${setMenuAtivo("Aventura")}`}>
+                        Aventura
+                    </li>
+                    <li className={menuAtivo === "Comédia" ? "ativo" : ""}  onClick={()=>  `${setGeneroFilmes(comedia)} ${setMenuAtivo("Comédia")}`}>
+                        Comédia
+                    </li>
+                    <li className={menuAtivo === "Crime" ? "ativo" : ""} onClick={()=>  `${setGeneroFilmes(crime)} ${setMenuAtivo("Crime")}`}>
+                        Crime
+                    </li>
+                    <li className={menuAtivo === "Fantasia" ? "ativo" : ""} onClick={()=>  `${setGeneroFilmes(fantasia)} ${setMenuAtivo("Fantasia")}`}>
+                        Fantasia
+                    </li>
+                    <li className={menuAtivo === "Família" ? "ativo" : ""} onClick={()=>  `${setGeneroFilmes(familia)} ${setMenuAtivo("Família")}`}>
+                        Família
+                    </li>
+                   
                 </ul>
             </nav>
             <Areafimes>

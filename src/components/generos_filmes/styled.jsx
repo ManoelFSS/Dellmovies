@@ -59,10 +59,8 @@ export  const Areafimes = styled.section`
     
     div{
         max-width: 78.5%;
-        display: flex;
         justify-content: center;
         flex-wrap: wrap;
-      
 
         @media(max-width:577px){
             max-width: 100%;
@@ -70,15 +68,13 @@ export  const Areafimes = styled.section`
 
         section{
             width: 220px;
-            display: inline-block;
-            color: #fff;
+            color: #ffffff;
             padding-bottom: 5px;
-            flex-direction:column;
-            position: relative;
-            cursor: pointer;
-            transform: scale(0.9);
-    
-            @media(max-width:320px){
+            @media(max-width:466px){
+                width: 160px;
+           
+            }
+            @media(max-width:324px){
                 min-width: 250px;
             }
         }

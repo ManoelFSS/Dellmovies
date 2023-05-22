@@ -72,7 +72,7 @@ export  const Areafimes = styled.section`
             padding-bottom: 5px;
             transition: all 0.3s;
             &:hover{
-                transform: scale(0.8);
+                transform: scale(1);
             }
 
             @media(max-width:466px){

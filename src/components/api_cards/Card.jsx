@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import {Card, Div} from './styled'
+import {Card, Div, CardHover} from './styled'
 import axios, { all } from 'axios'
 import { AiOutlineStar } from 'react-icons/ai' ;
 import { IconContext } from "react-icons";
@@ -15,6 +15,9 @@ const API_BASE = 'https://api.themoviedb.org/3';
 const [filmes, setFilmes] = useState([])
 const [colorIcone, setColorIcone] = useState('#fff')
 const [quantidadeFilmes, setquantidadeFilmes] = useState(10)
+
+
+
 
 useEffect(() => {
 
@@ -47,18 +50,67 @@ function setApi(urlendereco, urlimage ){
 };
 
 
+    const handleHover = () => {
 
+        let card = document.querySelectorAll('.cardHover')
+        // let cardHon = document.querySelectorAll('.cardHover')
+
+        card.forEach((item)=>{
+            item.addEventListener('mouseover', ()=>{
+                for(let i = 0; i < card.length; i++){
+                    card[i].classList.add('cardHover')
+                    // cardHon[i].classList.remove('cardHover')
+                }
+                console.log('click')
+                item.classList.remove('cardHover')
+                // item.classList.add('cardHover')
+            })
+        
+        })
+
+     
+    };
+
+    useEffect(()=>{
+        const handlesair = () => {
+
+            let card = document.querySelectorAll('.cardHover')
+            // let cardHon = document.querySelectorAll('.cardHover')
+    
+            card.forEach((item)=>{
+                item.addEventListener('onmouseout', ()=>{
+                    for(let i = 0; i < card.length; i++){
+                        item[i].classList.add('cardHover')
+                        // cardHon[i].classList.remove('cardHover')
+                    }
+                    console.log('click22')
+                    
+                })
+            
+            })
+    
+         
+        };
+        handlesair()
+    })
+
+   
+  
     return (
         <Div>
             {filmes.slice(0,props.quantidadeFilmes).map((item, id )=> (
-                <Card key={id} className={'cards'}>
+                <Card key={item.id} >
                     <img src={item.image} alt={item.title} />
                     <div>
                         <h3>{item.title.length > 17 ? item.title.slice(0, 17) + ' ' + '...' : item.title}</h3>
                         <p>{item.release_date.split('').slice(0, 4).join(' ')}</p>
                         <IconContext.Provider  value={{ className:'icone' , color: colorIcone}} >
                             <span onClick={() => setColorIcone( colorIcone === '#fff' ? '#48ff00' : '#fff')} ><AiOutlineStar/></span>
-                         </IconContext.Provider>
+                        </IconContext.Provider>
+                        <CardHover className={"cardHover"} onMouseEnter={()=> handleHover()}>
+                            <h3>{item.title.length > 17 ? item.title.slice(0, 17) + ' ' + '...' : item.title}</h3>
+                            <p>{item.overview.length > 500 ? item.overview.slice(0, 500) + ' ' + '...' : item.overview}</p>
+                        </CardHover>
                     </div>
                 </Card>
             ))}

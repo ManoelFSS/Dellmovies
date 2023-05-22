@@ -14,8 +14,7 @@ export const Card = styled.section`
     position: relative;
     cursor: pointer;
     transform: scale(0.9);
-  
-    
+ 
     
     @media(max-width:320px){
         min-width: 250px;
@@ -45,7 +44,6 @@ export const Card = styled.section`
 
     img{
         width: 100%;
-        position: relative;
     
     }
 
@@ -63,6 +61,10 @@ export const Card = styled.section`
         color: #b4b4b4;
     }
 
+
+    .cardHover{
+        opacity: 0;
+    }
   
 `;
 
@@ -70,4 +72,24 @@ export const Card = styled.section`
 export const Div = styled.div`
     display: flex;
     background-color: #000000;
+    position:relative;
+    
+`;
+
+export const CardHover = styled.article`
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position:absolute;
+    padding: 6px;
+    opacity:1;
+    transition: all 0.3s;
+    top: 0;
+    left:0;
+    z-index:100;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0deg,  #000000 11.5%, #000000b7 45%, rgba(0, 0, 0, 0.74) 45%);
+  
 `;

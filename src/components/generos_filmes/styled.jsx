@@ -73,6 +73,9 @@ export  const Areafimes = styled.section`
             transition: all 0.3s;
             &:hover{
                 transform: scale(1);
+                z-index:3;
+                border: solid 1px #ffffff1c;
+            
             }
 
             @media(max-width:466px){

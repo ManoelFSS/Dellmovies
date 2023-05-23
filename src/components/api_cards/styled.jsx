@@ -15,6 +15,7 @@ export const Card = styled.section`
     position: relative;
     cursor: pointer;
     transform: scale(0.9);
+   
  
 
     @media(max-width:425px){
@@ -89,16 +90,29 @@ export const CardHover = styled.article`
     display:flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: left;
     position:absolute;
-    padding: 6px;
+    padding: 15px;
     opacity:0;
     transition: all 0.3s;
+    color: #ffffff;
     top: 0;
     left:0;
     z-index:1;
     width: 100%;
     height: 100%;
     background-image: linear-gradient(0deg,  #000000 15%, #000000d5 45%, rgba(0, 0, 0, 0.808) 40%);
-    overflow: auto;
+    overflow: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth; /* Suaviza a rolagem */
+    transition: scroll-duration 1s; /* Define a duração da rolagem suave */
+  
+    &::-webkit-scrollbar {
+        width: 1px; /* Largura da barra de rolagem */
+      
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: #ff0000; /* Cor de fundo da barra de rolagem */ 
+    }
+    
 `;

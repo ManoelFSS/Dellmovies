@@ -100,5 +100,5 @@ export const CardHover = styled.article`
     width: 100%;
     height: 100%;
     background-image: linear-gradient(0deg,  #000000 15%, #000000d5 45%, rgba(0, 0, 0, 0.808) 40%);
-  
+    overflow: auto;
 `;

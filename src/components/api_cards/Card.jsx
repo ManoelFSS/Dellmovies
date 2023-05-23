@@ -62,7 +62,7 @@ function setApi(urlendereco, urlimage ){
                         </IconContext.Provider>
                         <CardHover className={"cardHover"}>
                             <h3>{item.title.length > 17 ? item.title.slice(0, 17) + ' ' + '...' : item.title}</h3>
-                            <p>{item.overview.length > 200 ? item.overview.slice(0,200) + ' ' + '...' : item.overview}</p>
+                            <p>{item.overview.length > 600 ? item.overview.slice(0,600) + ' ' + '...' : item.overview}</p>
                         </CardHover>
                     </div>
                 </Card>

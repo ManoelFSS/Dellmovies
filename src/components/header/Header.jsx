@@ -10,7 +10,8 @@ import Iconevideo from '../../assets/iconevideo.png'
 export default function Header(){
 
 const [emAlta, setEmAlta] = useState('/movie/top_rated?language=pt-BR&page=1&')
-const [popular, setPopular] = useState('/movie/popular?&language=pt-BR&page=1&')
+const [popular, setPopular] = useState('/movie/popular?&language=pt-BR')
+// https://api.themoviedb.org/3/movie/popular?language=pt-BR
 const [acao, setAcao] = useState(`/discover/movie?with_genres=28&language=pt-BR&page=1&`)
 const [secao, setSecao] = useState(acao)
 

@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const Headers = styled.header`
     display: flex;
     justify-content: center;
-    background: #000000 url(${props=> props.back}) no-repeat center / 100% 100%;
+    overflow: hidden;
+    background: #000000 url(${props=> props.back}) no-repeat  fixed center / 100% 100%;
     height:100Vh;
     position:relative;
     top: 0;
@@ -197,9 +198,9 @@ export const Descricao = styled.div`
     width: 100%;
     margin-left:2%; 
    }
-  /* @media(max-width:466px){
+  @media(max-width:466px){
     padding-bottom:45px;
-  } */
+  }
 
   h1{
     font-size: 24px;
@@ -219,6 +220,9 @@ export const Descricao = styled.div`
     padding-right: 10px;
     @media(max-width:670px){
         font-size: 11px;
+    }
+    @media(max-width:480px){
+        font-size: 14px;
     }
   }
 

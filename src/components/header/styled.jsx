@@ -4,9 +4,9 @@ export const Headers = styled.header`
     display: flex;
     justify-content: center;
     overflow: hidden;
-    background: #000000 url(${props=> props.back}) no-repeat  fixed center / 100% 100%;
+    background: #000000 url(${props=> props.back}) no-repeat  fixed center / cover;
     height:100Vh;
-    position:relative;
+   
     top: 0;
   
 
@@ -18,7 +18,7 @@ export const Headers = styled.header`
         background-color: #0000001f;
         backdrop-filter: blur(10px);
         position: fixed;
-        z-index:1;
+        z-index:99;
         @media(max-width:670px){
             padding: 10px 10px;
         }
@@ -148,7 +148,7 @@ export const  HeaderGradient = styled.header`
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    height:100vh;
+    height:101vh;
     width: 100%;
     position: absolute;
     top: 0;
@@ -200,6 +200,8 @@ export const Descricao = styled.div`
    }
   @media(max-width:466px){
     padding-bottom:45px;
+    padding-left: 20px;
+    padding-right: 10px;
   }
 
   h1{
@@ -222,7 +224,7 @@ export const Descricao = styled.div`
         font-size: 11px;
     }
     @media(max-width:480px){
-        font-size: 14px;
+        font-size: 15px;
     }
   }
 

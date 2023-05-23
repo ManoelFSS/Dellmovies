@@ -14,7 +14,7 @@ const API_BASE = 'https://api.themoviedb.org/3';
 
 const [filmes, setFilmes] = useState([])
 const [colorIcone, setColorIcone] = useState('#fff')
-const [quantidadeFilmes, setquantidadeFilmes] = useState(10)
+const [quantidadeFilmes, setquantidadeFilmes] = useState([])
 
 
 
@@ -49,6 +49,12 @@ function setApi(urlendereco, urlimage ){
 
 };
 
+
+const hendleColor = (index)=>{
+ 
+    console.log(index.target.style.backgroundColor === '' ? index.target.style.backgroundColor = '#7bff00': index.target.style.backgroundColor = ""  )
+}
+
     return (
         <Div>
             {filmes.slice(0,props.quantidadeFilmes).map((item, id )=> (
@@ -57,9 +63,7 @@ function setApi(urlendereco, urlimage ){
                     <div>
                         <h3>{item.title.length > 17 ? item.title.slice(0, 17) + ' ' + '...' : item.title}</h3>
                         <p>{item.release_date.split('').slice(0, 4).join(' ')}</p>
-                        <IconContext.Provider  value={{ className:'icone' , color: colorIcone}} >
-                            <span onClick={() => setColorIcone( colorIcone === '#fff' ? '#48ff00' : '#fff')} ><AiOutlineStar/></span>
-                        </IconContext.Provider>
+                        <span  key={item.id} onClick={(index)=> hendleColor(index)} ></span>
                         <CardHover className={"cardHover"}>
                             <h3>{item.title.length > 17 ? item.title.slice(0, 17) + ' ' + '...' : item.title}</h3>
                             <p>{item.overview.length > 1000 ? item.overview.slice(0,1000) + ' ' + '...' : item.overview}</p>

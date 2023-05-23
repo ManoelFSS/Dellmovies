@@ -14,10 +14,10 @@ export const Card = styled.section`
     z-index: 2;
     position: relative;
     cursor: pointer;
+    user-select: none;
+    outline:none;
     transform: scale(0.9);
    
- 
-
     @media(max-width:425px){
         max-width: 110px;
     }
@@ -33,28 +33,28 @@ export const Card = styled.section`
     span{
      
         display: flex;
-        justify-content:flex-end;
+        justify-content:center;
         align-items: center;
         position:absolute;
         top: 15px;
         right: 15px;
-        width: 100%;
-        height: 20px;
+        width: 25px;
+        height: 25px;
         z-index: 2;
+        background: #525252 url('https://cdn.icon-icons.com/icons2/1558/PNG/512/353442-bookmark-circle-favorite-favorites-favourite-like-star_107512.png') no-repeat center / 100% 100%;
+        transition: all 0.2s;
         cursor: pointer;
- 
+        border-radius: 50%;
+        border: none;
     }
-    .icone{
-        span{
-            width: 100%;
-         
-        }
+    span:hover{
+        transform: scale(1.2);
     }
  
 
     img{
         width: 100%;
-    
+       
     }
 
 
@@ -75,6 +75,8 @@ export const Card = styled.section`
     &:hover .cardHover{
         opacity: 1;
     }
+
+   
   
 `;
 

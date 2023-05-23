@@ -36,8 +36,8 @@ export const Card = styled.section`
         justify-content:center;
         align-items: center;
         position:absolute;
-        top: 15px;
-        right: 15px;
+        bottom: 10px;
+        right: 8px;
         width: 25px;
         height: 25px;
         z-index: 2;

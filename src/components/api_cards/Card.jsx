@@ -49,57 +49,10 @@ function setApi(urlendereco, urlimage ){
 
 };
 
-
-    const handleHover = () => {
-
-        let card = document.querySelectorAll('.cardHover')
-        // let cardHon = document.querySelectorAll('.cardHover')
-
-        card.forEach((item)=>{
-            item.addEventListener('mouseover', ()=>{
-                for(let i = 0; i < card.length; i++){
-                    card[i].classList.add('cardHover')
-                    // cardHon[i].classList.remove('cardHover')
-                }
-                console.log('click')
-                item.classList.remove('cardHover')
-                // item.classList.add('cardHover')
-            })
-        
-        })
-
-     
-    };
-
-    useEffect(()=>{
-        const handlesair = () => {
-
-            let card = document.querySelectorAll('.cardHover')
-            // let cardHon = document.querySelectorAll('.cardHover')
-    
-            card.forEach((item)=>{
-                item.addEventListener('onmouseout', ()=>{
-                    for(let i = 0; i < card.length; i++){
-                        item[i].classList.add('cardHover')
-                        // cardHon[i].classList.remove('cardHover')
-                    }
-                    console.log('click22')
-                    
-                })
-            
-            })
-    
-         
-        };
-        handlesair()
-    })
-
-   
-  
     return (
         <Div>
             {filmes.slice(0,props.quantidadeFilmes).map((item, id )=> (
-                <Card key={item.id} >
+                <Card key={item.id} className={props.class} >
                     <img src={item.image} alt={item.title} />
                     <div>
                         <h3>{item.title.length > 17 ? item.title.slice(0, 17) + ' ' + '...' : item.title}</h3>
@@ -107,9 +60,9 @@ function setApi(urlendereco, urlimage ){
                         <IconContext.Provider  value={{ className:'icone' , color: colorIcone}} >
                             <span onClick={() => setColorIcone( colorIcone === '#fff' ? '#48ff00' : '#fff')} ><AiOutlineStar/></span>
                         </IconContext.Provider>
-                        <CardHover className={"cardHover"} onMouseEnter={()=> handleHover()}>
+                        <CardHover className={"cardHover"}>
                             <h3>{item.title.length > 17 ? item.title.slice(0, 17) + ' ' + '...' : item.title}</h3>
-                            <p>{item.overview.length > 500 ? item.overview.slice(0, 500) + ' ' + '...' : item.overview}</p>
+                            <p>{item.overview.length > 200 ? item.overview.slice(0,200) + ' ' + '...' : item.overview}</p>
                         </CardHover>
                     </div>
                 </Card>

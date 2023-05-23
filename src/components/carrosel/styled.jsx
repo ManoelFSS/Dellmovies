@@ -5,7 +5,7 @@ export const Section = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: black;
+    background-color: #000000;
 `;
 
 export const Title = styled.div`
@@ -19,7 +19,6 @@ export const Title = styled.div`
 export const Containner = styled.section`
     width: 100%;
     display: flex;
-
     justify-content: center;
     position: relative;
     background-color: #000000;
@@ -33,14 +32,15 @@ export const Containner = styled.section`
         width: 100%;
         height: 10vh;
         position: absolute;
-        z-index: 1;
+        z-index:0;
         top: 50%;
         transform: translateY(-50%);
         color: #717171;
+
    
 
         @media(max-width:864px){
-            padding: 0px 2%;
+            padding: 0px 0%;
         }
     
     }
@@ -48,6 +48,7 @@ export const Containner = styled.section`
     .direcionais{
         font-size: 70px;
         font-weight:700;
+        cursor: pointer;
         @media(max-width:581px){
             font-size: 40px;
         }
@@ -57,11 +58,12 @@ export const Containner = styled.section`
 
 export const CorrentSlid = styled.div`
     display: flex;
-    max-width: 78%;
+    max-width: calc(77vw);
     min-width: 200px;
     overflow: hidden;
     overflow-x: scroll;
     scroll-behavior: smooth; /* Suaviza a rolagem */
     transition: scroll-duration 1s; /* Define a duração da rolagem suave */
+    
 `;
 

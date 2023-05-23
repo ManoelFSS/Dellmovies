@@ -3,9 +3,11 @@ import styled from 'styled-components';
 export const Headers = styled.header`
     display: flex;
     justify-content: center;
-    background: #000000 url(${props=> props.back}) no-repeat center / cover;
-    height: 100vh;
-    position: relative;
+    background: #000000 url(${props=> props.back}) no-repeat center / 100% 100%;
+    height:100Vh;
+    position:relative;
+    top: 0;
+  
 
     section{
         display: flex;
@@ -46,7 +48,7 @@ export const Headers = styled.header`
             align-items: center;
             padding-left: 10px;
 
-            @media(max-width:649px){
+            @media(max-width:899px){
                 display:none ;
             }
 
@@ -107,28 +109,6 @@ export const Headers = styled.header`
   
 `;
 
-
-
-export const  HeaderGradient = styled.header`
-
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    height: 101%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: #fff;
-    padding-bottom: 10px;
-    background-image: linear-gradient(0deg,  #000000 5%, #000000f9 7%, rgba(0, 0, 0, 0.24) 88%);
-
-    @media(max-width:670px){
-        align-items:flex-end;
-       
-    }
-`;
-
 export const Input = styled.input`
 
     width: ${props => props.widthInput};
@@ -152,28 +132,42 @@ export const Input = styled.input`
         font-size: 14px;
         text-shadow: 0px 2px 8px #0000005C;
     }
-    &:focus,  &:hover, &:active {
+    &:focus,  &:hover, &:active{
         width: 200px ;
-        border: solid 1px #cecece;
         outline: none;
         transition: all 0.5s;
         border-radius: 10px;
+        border: solid 1px#fff;
     }
     
 `;
+
+export const  HeaderGradient = styled.header`
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height:100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background-image: linear-gradient(0deg,  #000000 5%, #000000f9 7%, rgba(0, 0, 0, 0.24) 88%);
+`;
+
 
 export const  Containner = styled.div`
     display: flex;
     align-items: flex-end;
     width: 100%;
-    padding: 10px 30px 30px 50px;
+    padding: 0px 0px 50px 0px;
    
     @media(max-width:670px){
-        padding: 10px 10px;
+        padding: 0px 0px 50px 0px;
         
     }
 `;
-
 
 export const  Avaliacao = styled.div`
 
@@ -198,13 +192,14 @@ export const  Avaliacao = styled.div`
 export const Descricao = styled.div`
    width: 600px;
    margin-left:11%;
+
    @media(max-width:680px){
     width: 100%;
     margin-left:2%; 
-  }
-  @media(max-width:466px){
+   }
+  /* @media(max-width:466px){
     padding-bottom:45px;
-  }
+  } */
 
   h1{
     font-size: 24px;

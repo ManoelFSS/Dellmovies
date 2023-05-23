@@ -11,14 +11,22 @@ export const Card = styled.section`
     color: #fff;
     padding-bottom: 5px;
     flex-direction:column;
+    z-index: 2;
     position: relative;
     cursor: pointer;
     transform: scale(0.9);
  
-    
+
+    @media(max-width:425px){
+        max-width: 110px;
+    }
+    @media(max-width:375px){
+        max-width: 147px;
+    }
     @media(max-width:320px){
         min-width: 250px;
     }
+   
    
 
     span{
@@ -31,13 +39,14 @@ export const Card = styled.section`
         right: 15px;
         width: 100%;
         height: 20px;
+        z-index: 2;
         cursor: pointer;
  
     }
     .icone{
         span{
             width: 100%;
-            border: solid red 2px;
+         
         }
     }
  
@@ -62,8 +71,8 @@ export const Card = styled.section`
     }
 
 
-    .cardHover{
-        opacity: 0;
+    &:hover .cardHover{
+        opacity: 1;
     }
   
 `;
@@ -83,13 +92,13 @@ export const CardHover = styled.article`
     text-align: center;
     position:absolute;
     padding: 6px;
-    opacity:1;
+    opacity:0;
     transition: all 0.3s;
     top: 0;
     left:0;
-    z-index:100;
+    z-index:1;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(0deg,  #000000 11.5%, #000000b7 45%, rgba(0, 0, 0, 0.74) 45%);
+    background-image: linear-gradient(0deg,  #000000 15%, #000000d5 45%, rgba(0, 0, 0, 0.808) 40%);
   
 `;

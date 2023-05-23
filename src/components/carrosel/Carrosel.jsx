@@ -16,11 +16,15 @@ function Carrosel(){
         let widthCorrentSlid = document.querySelector('#correntSlid').offsetWidth;
         let cards = document.querySelectorAll('.cards');
         let widthCard = document.querySelector('.cards').offsetWidth;
-        console.log(widthCorrentSlid)
+    
+        // console.log(widthCorrentSlid)
+        // console.log(newMagin)
 
-        if(newMagin <  (cards.length * widthCard) - widthCorrentSlid  ){
+        if(newMagin <  ((cards.length * widthCard) - widthCorrentSlid) - widthCard ){
+            console.log(((cards.length * widthCard) - widthCorrentSlid )  + widthCard )
+
             let carouselContainer = document.querySelector('#correntSlid');
-            setCount(newMagin = newMagin + (widthCard))
+            setCount(newMagin += widthCard)
             carouselContainer.scrollLeft = newMagin ;
 
         }
@@ -31,11 +35,12 @@ function Carrosel(){
 
         let widthCorrentSlid = document.querySelector('#correntSlid').offsetWidth;
         let widthCard = document.querySelector('.cards').offsetWidth;
-        console.log(widthCorrentSlid)
+        console.log('marginLeft')
+
 
         if(newMagin >  0 ){
             let carouselContainer = document.querySelector('#correntSlid');
-            setCount(newMagin = newMagin - (widthCard))
+            setCount(newMagin = newMagin - widthCard)
             carouselContainer.scrollLeft = newMagin ;
             console.log(newMagin)
         }
@@ -50,7 +55,7 @@ function Carrosel(){
             </Title>
             <Containner>
                 <CorrentSlid id={'correntSlid'}>
-                    <Cards url={popular} />
+                    <Cards url={popular} class={'cards'} />
                 </CorrentSlid>
                 <div className={'bnt'}>
                     <IconContext.Provider  value={{className:'direcionais'}} >
